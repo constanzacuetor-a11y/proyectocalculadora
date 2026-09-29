@@ -10,6 +10,8 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import com.example.Calculadora.exception.OperacionInvalidaException;
+
 public class OperacionMatematicaTest {
 
     @Test
@@ -82,9 +84,9 @@ public class OperacionMatematicaTest {
 
         // Act + Assert
         assertThrows(
-            IllegalArgumentException.class,
-            () -> operacion.calcular(numero1, numero2)
-        );
+    OperacionInvalidaException.class,
+    () -> operacion.calcular(numero1, numero2)
+);
     }
 
     @Test
